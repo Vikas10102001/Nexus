@@ -1,0 +1,40 @@
+.onlineFriendList {
+    list-style: none;
+  }
+  .onlineFriend {
+    display: flex;
+    align-items: center;
+    position: relative;
+    height:30px;
+    padding-left: 10px;
+    margin-top: 10px;
+    border-radius: 10px 0 0 10px;
+  }
+  .onlineFriend:hover{
+    background-color: antiquewhite;
+  }
+  .onlineFriendImage {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  .onlineDot {
+    width: 8px;
+    height: 8px;
+    background-color: limegreen;
+    border:2px solid white;
+    border-radius: 50%;
+    position: absolute;
+    top: 19px;
+    left: 30px;
+  }
+  
+  .onlineFriendName {
+    margin-left: 20px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+  }
+  

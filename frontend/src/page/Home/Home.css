@@ -1,0 +1,6 @@
+.home {
+  display: flex;
+}
+.profileRight {
+  flex: 9.5;
+}

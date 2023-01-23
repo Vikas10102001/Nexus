@@ -1,0 +1,35 @@
+.message{
+    display: flex;
+    margin: 20px 0;
+}
+.message img{
+    width:42px;
+    height:42px;
+    border-radius: 50%;
+}
+.chat{
+    margin-left: 10px;
+    width:50%;
+    padding: 10px;
+    background-color: var(--theme-color);
+    border-radius: 20px;
+    color: white;
+}
+.chatTime{
+    display: flex;
+    font-size: 12px;
+    position: relative;
+    top:-15px;
+    color:gray
+
+}
+.notOwn{
+    padding-left: 340px;
+}
+.own{
+    justify-content: flex-end;
+}
+.own span{
+background-color: aliceblue;
+color: black; 
+}

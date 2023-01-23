@@ -1,0 +1,30 @@
+.profile{
+    display:flex;
+}
+.profileRight{
+    display: flex;
+    flex-direction: column;
+}
+.profileRightBottom{
+    display: flex;
+}
+
+.profileTopDescription{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.profileTopDescription p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+    width: 500px;
+    height:max-content;
+    font-weight: 500;
+    color:gray
+}
+.profileHr{
+    background-color: rgb(231, 228, 228);
+}

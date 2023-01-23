@@ -1,0 +1,54 @@
+.rightBar {
+  flex: 4;
+  height:calc(100vh - 50px);
+  overflow-y: auto;
+  overflow-x: hidden;
+  position: sticky;
+  border: 1px solid rgb(189, 185, 185);
+  top: 50px;
+  background-color: aliceblue;
+}
+.rightBarWrapper {
+  width: 100%;
+  padding: 40px 0 0 57px;
+}
+.birthdayContainer {
+  display: flex;
+  width: 70%;
+}
+.birthdayIcon {
+  font-size: 45px !important;
+  color: #ee6352;
+}
+.birthdayText {
+  margin-left: 20px;
+  font-size: 16px;
+}
+
+.birthdayText span {
+  font-weight: 500;
+  cursor: pointer;
+  font-size: 17px;
+}
+
+.birthdayText span:hover {
+  text-decoration: underline;
+}
+
+.adContainer {
+  margin-top: 20px;
+}
+.ad {
+  border-radius: 10px;
+  width: 87%;
+  object-fit: contain;
+}
+
+.onlineContainer {
+  margin: 30px 0 0 20px;
+  width: 90%;
+}
+.onlineContainerText {
+  font-size: 17px;
+  font-weight: 500;
+}

@@ -47,19 +47,20 @@ const userSchema = Mongoose.Schema(
     followers: [
       {
         type: Mongoose.Schema.ObjectId,
-        ref:'User'
+        ref: "User",
       },
     ],
     followings: [
       {
         type: Mongoose.Schema.ObjectId,
-        ref:'User'
+        ref: "User",
       },
     ],
     private: {
       type: Boolean,
       default: false,
     },
+    requests: [{ type: Mongoose.Schema.ObjectId, ref: "User" }],
     active: {
       type: Boolean,
       default: true,

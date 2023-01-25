@@ -12,12 +12,14 @@ exports.getUser = catchAsync(async (req, res, next) => {
 //follow User
 exports.followUser = catchAsync(async (req, res, next) => {
   const user = await User.findById(req.user.id);
+  const followUser=await User.findById(req.params.userId)
   if (user.followings.includes(req.params.userId)) {
     return res
       .status(400)
       .json({ status: "failed", message: "You already follow him" });
   }
-  if (user.private === true) {
+
+  if (followUser.private === true) {
     await User.findByIdAndUpdate(req.params.userId, {
       $push: { requests: req.user.id },
     });
@@ -36,12 +38,13 @@ exports.followUser = catchAsync(async (req, res, next) => {
 exports.unfollowUser = catchAsync(async (req, res, next) => {
   const user = await User.findById(req.user.id);
   if (!user.followings.includes(req.params.userId)) {
-    res.status(400).json({
+    return res.status(400).json({
       status: "failed",
       message: "You do not follow this user",
     });
   }
   user.followings.splice(user.followings.indexOf(req.params.userId), 1);
+  await user.save({ validateBeforeSave: false });
   res.status(200).json({
     status: "success",
     message:"user unfollowed"

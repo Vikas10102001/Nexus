@@ -12,4 +12,5 @@ router.route('/').get(userController.getUser)
 //Deleting User
 // router.route('/:id').get(getUserHandler)
 router.route('/:userId/follow').patch(authController.protect,userController.followUser)
+router.route('/:userId/unFollow').patch(authController.protect,userController.unfollowUser)
 module.exports=router
